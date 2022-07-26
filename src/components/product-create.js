@@ -31,7 +31,7 @@ const CreateProduct = () => {
   //const [Users, setUsers] = useState([]);
 
   const onSubmit = () => {
-    axios.post("http://localhost:5000/products/add", Product);
+    axios.post("https://super-grocery-app.herokuapp.com/products/add", Product);
   };
   //user is not being used in this form. We will use in StoreOrder
   /*   useEffect(() => {
