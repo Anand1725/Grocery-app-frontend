@@ -15,11 +15,11 @@ const CreateExercise = () => {
   const [Users, setUsers] = useState([]);
 
   const onSubmit = () => {
-    axios.post("http://localhost:5000/exercises/add", Exericse);
+    axios.post("https://super-grocery-app.herokuapp.com/add", Exericse);
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/users").then((res) => {
+    axios.get("https://super-grocery-app.herokuapp.com/users").then((res) => {
       res.data.map((user) => {
         setUsers((oldArray) => [...oldArray, user.username]);
         return 0;
