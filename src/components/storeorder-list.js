@@ -6,7 +6,7 @@ const StoreorderListshow = () => {
   const [StoreorderData, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/storeorder/").then((response) => {
+    axios.get("https://super-grocery-app.herokuapp.com/storeorder/").then((response) => {
       response.data.map((storedata) => {
         console.log(storedata.StoreOrderDetails)
         setData((oldArray) => [...oldArray, storedata]);
