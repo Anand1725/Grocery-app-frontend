@@ -6,7 +6,7 @@ const ExerciseList = () => {
   const [Data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/exercises/").then((response) => {
+    axios.get("https://super-grocery-app.herokuapp.com/exercises/").then((response) => {
       response.data.map((data) => {
         setData((oldArray) => [...oldArray, data]);
         return 0;
@@ -15,7 +15,7 @@ const ExerciseList = () => {
   }, []);
 
   const deleteExercise = (id) => {
-    axios.delete("http://localhost:5000/exercises/" + id).then((response) => {
+    axios.delete("https://super-grocery-app.herokuapp.com/exercises/" + id).then((response) => {
       console.log(response.data);
     });
 
