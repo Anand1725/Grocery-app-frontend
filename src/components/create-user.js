@@ -6,7 +6,7 @@ const CreateUser = () => {
 
   const onSubmit = () => {
     axios
-      .post("http://localhost:5000/users/add", { username: Username }).then((response=> console.log(response))).catch((error) => console.log(error))
+      .post("https://super-grocery-app.herokuapp.com/users/add", { username: Username }).then((response=> console.log(response))).catch((error) => console.log(error))
       
   };
   return (
