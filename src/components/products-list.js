@@ -6,7 +6,7 @@ const ProductList = () => {
   const [Data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/products/").then((response) => {
+    axios.get("https://super-grocery-app.herokuapp.com/products/").then((response) => {
       response.data.map((data) => {
         setData((oldArray) => [...oldArray, data]);
         return 0;
