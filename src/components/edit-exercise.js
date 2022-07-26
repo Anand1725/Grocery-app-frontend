@@ -18,12 +18,12 @@ const EditExercise = () => {
 
   const onSubmit = () => {
     axios
-      .post("http://localhost:5000/exercises/update/"+id, Exericse)
+      .post("https://super-grocery-app.herokuapp.com/exercises/update/"+id, Exericse)
   };
 
   useEffect( () => {
 
-    axios.get('http://localhost:5000/exercises/'+id)
+    axios.get('https://super-grocery-app.herokuapp.com/exercises/'+id)
       .then(response => {
         setExericse({
           username: response.data.username,
@@ -37,7 +37,7 @@ const EditExercise = () => {
       })
 
      axios
-      .get("http://localhost:5000/users")
+      .get("https://super-grocery-app.herokuapp.com/users")
       .then(res => {
         console.log(res)
         res.data.map(user => {
