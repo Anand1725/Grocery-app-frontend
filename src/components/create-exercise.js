@@ -19,7 +19,7 @@ const CreateExercise = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/users").then((res) => {
+    axios.get("https://superb-grocery-app.herokuapp.com/users").then((res) => {
       res.data.map((user) => {
         setUsers((oldArray) => [...oldArray, user.username]);
         return 0;
