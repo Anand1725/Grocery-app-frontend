@@ -15,7 +15,7 @@ const CreateExercise = () => {
   const [Users, setUsers] = useState([]);
 
   const onSubmit = () => {
-    axios.post("http://localhost:5000/exercises/add", Exericse);
+    axios.post("https://superb-grocery-app.herokuapp.com/exercises/add", Exericse);
   };
 
   useEffect(() => {
